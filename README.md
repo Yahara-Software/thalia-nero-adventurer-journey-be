@@ -1,5 +1,5 @@
 # Adventurer Journey - Back End
-The candidate should have a branch created for them. They will then submit their completed code back to the branch for Yahara Softare to review.
+The candidate should fork the main branch. After completing their work they will then create a PR back to the branch for Yahara Software to review.
 
 They will follow the story below and create a program to solve the problem.
 
