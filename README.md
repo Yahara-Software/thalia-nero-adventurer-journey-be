@@ -10,11 +10,11 @@ You are an adventurer standing in the center of a map facing North, and you’re
 
 Adventurer Path & Instructions - [./Adventurer Path.md](./Adventurer%20Path.md)
 
-Given the Path Instructions above, programatically parse the instructions and determine what is the straight line distance from your starting point to the destination in steps?
+Given the Path Instructions above, programmatically parse the instructions and determine what is the Euclidean (straight line) distance from your starting point to the destination in steps?
 
 **Tech Notes:**
 - Use whatever languages, references and tooling you would like.
 - Provide any needed instructions to run program.
 - Do not round to the nearest step.
 - After program executes the answer should be returned.
-- All relevant code should be committed and pushed back to the remote branch.
+- All relevant code should be compressed (zip'd) and uploaded to the azure storage linked in the instructions email
