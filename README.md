@@ -1,5 +1,5 @@
 # Adventurer Journey - Back End
-The candidate should fork the main branch. After completing their work they will then create a PR back to the branch for Yahara Software to review.
+The candidate should fork the main branch. After completing their work they will compress (zip) their code and submit back to the storage bucket linked in the email.
 
 They will follow the story below and create a program to solve the problem.
 
@@ -17,4 +17,4 @@ Given the Path Instructions above, programmatically parse the instructions and d
 - Provide any needed instructions to run program.
 - Do not round to the nearest step.
 - After program executes the answer should be returned.
-- All relevant code should be compressed (zip'd) and uploaded to the azure storage linked in the instructions email
+- All relevant code should be compressed (zip'd) and uploaded to the storage bucket linked in the instructions email
