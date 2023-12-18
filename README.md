@@ -1,7 +1,5 @@
 # Adventurer Journey - Back End
-The candidate should fork the main branch. After completing their work they will compress (zip) their code and submit back to the storage bucket linked in the email.
-
-They will follow the story below and create a program to solve the problem.
+Please complete the story below and create a program to solve the problem. Commit any work back to the remote no later than 48 hours before the next interview.
 
 *Please use whatever languages, references and tooling you would like to complete the story.*
 
@@ -17,4 +15,3 @@ Given the Path Instructions above, programmatically parse the instructions and d
 - Provide any needed instructions to run program.
 - Do not round to the nearest step.
 - After program executes the answer should be returned.
-- All relevant code should be compressed (zip'd) and uploaded to the storage bucket linked in the instructions email
