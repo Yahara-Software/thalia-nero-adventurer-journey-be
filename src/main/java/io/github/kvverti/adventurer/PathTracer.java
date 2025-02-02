@@ -29,18 +29,30 @@ public final class PathTracer {
         this.posY = 0;
     }
 
+    /**
+     * The current X position of this tracer.
+     */
     public int getPosX() {
         return this.posX;
     }
 
+    /**
+     * The current Y position of this tracer.
+     */
     public int getPosY() {
         return this.posY;
     }
 
+    /**
+     * Turns this tracer with the given action.
+     */
     public void turn(@NotNull TurnAction action) {
         this.facing = action.turn(this.facing);
     }
 
+    /**
+     * Moves this tracer forward the given number of units.
+     */
     public void move(int units) {
         switch(this.facing.axis()) {
             case X -> this.posX += units * this.facing.sign();

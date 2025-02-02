@@ -32,6 +32,9 @@ public enum TurnAction {
      */
     private final int indexOffset;
 
+    /**
+     * The unique character that represents this action.
+     */
     private final char indicator;
 
     TurnAction(int indexOffset, char indicator) {
@@ -40,7 +43,7 @@ public enum TurnAction {
     }
 
     /**
-     * A single-character indicator that identifies this action.
+     * The unique character that represents this action.
      */
     public char indicator() {
         return this.indicator;
@@ -53,7 +56,8 @@ public enum TurnAction {
      */
     public @NotNull FacingDirection turn(@NotNull FacingDirection initial) {
         var facingDirections = FacingDirection.values();
-        return facingDirections[(initial.ordinal() + this.indexOffset) % facingDirections.length];
+        var length = facingDirections.length;
+        return facingDirections[(initial.ordinal() + this.indexOffset + length) % length];
     }
 
     /**
