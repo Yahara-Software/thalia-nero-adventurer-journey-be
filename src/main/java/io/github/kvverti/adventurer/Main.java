@@ -2,9 +2,11 @@ package io.github.kvverti.adventurer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 
 import io.github.kvverti.adventurer.direction.TurnAction;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.VisibleForTesting;
 
 public class Main {
@@ -37,9 +39,11 @@ public class Main {
     static List<Step> parseSteps(String input) throws StepParseException {
         var result = new ArrayList<Step>();
         var matcher = STEP_PATTERN.matcher(input);
+        @Nullable MatchResult lastMatch = null;
 
         try {
             while(matcher.find()) {
+                lastMatch = matcher.toMatchResult();
                 var distance = Integer.parseInt(matcher.group(1));
                 var turnChar = matcher.group(2).charAt(0);
                 var turn = TurnAction.fromIndicator(turnChar);
@@ -47,6 +51,10 @@ public class Main {
             }
         } catch(RuntimeException e) {
             throw new StepParseException("Exception parsing steps", e);
+        }
+
+        if(lastMatch != null && lastMatch.end() != input.length()) {
+            throw new StepParseException("Some steps could not be parsed: index " + lastMatch.end());
         }
 
         return result;
