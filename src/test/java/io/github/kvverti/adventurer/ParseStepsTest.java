@@ -17,8 +17,20 @@ public class ParseStepsTest {
     }
 
     @Test(expected = StepParseException.class)
-    public void error() throws StepParseException {
+    public void errorAtEnd() throws StepParseException {
         var input = "1F23h";
+        Main.parseSteps(input);
+    }
+
+    @Test(expected = StepParseException.class)
+    public void errorInMiddle() throws StepParseException {
+        var input = "1F22G3R";
+        Main.parseSteps(input);
+    }
+
+    @Test(expected = StepParseException.class)
+    public void errorAtBeginning() throws StepParseException {
+        var input = "df2R";
         Main.parseSteps(input);
     }
 }
